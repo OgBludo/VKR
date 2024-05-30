@@ -1,0 +1,140 @@
+@import '../variables';
+
+.maincont {
+  width: 100%;
+  margin-top: 20px;
+
+  border-radius: 0px 0px 20px 20px;
+  background-color: inherit;
+  align-items: center;
+  min-height: calc(65vh);
+  margin-bottom: 21vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  .registeradm {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: $primary-color;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .loginform {
+    width: 360px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    padding: 24px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        font-size: 20px;
+        font-weight: 500;
+        color: $primary-text-color;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+
+      form {
+        width: 100%;
+
+        .form {
+          width: 100%;
+          margin-bottom: 16px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          input {
+            height: 50px;
+            font-size: 14px;
+            color: $primary-text-color;
+            border: 2px solid $input-border-color;
+            border-radius: 2px;
+            padding: 8px 12px;
+            box-sizing: border-box;
+            width: 100%;
+
+            &:focus {
+              border: 2px solid $primary-color;
+              box-shadow: 0 0 5px $primary-color;
+            }
+
+            &:valid {
+              + label {
+                color: $primary-color;
+              }
+            }
+
+            &:invalid {
+              + label {
+                color: $error-color;
+              }
+            }
+
+            &:valid:focus,
+            &:invalid:focus {
+              + label {
+                color: $primary-color;
+              }
+            }
+          }
+
+          label {
+            font-size: 14px;
+            font-weight: 500;
+            color: $secondary-text-color;
+            display: block;
+            text-align: left;
+            width: 100%;
+            margin-bottom: 4px;
+          }
+
+          fieldset {
+            border: none;
+            margin: 0;
+            padding: 0;
+          }
+        }
+
+        button {
+          font-size: 14px;
+          font-weight: 500;
+          color: #fff;
+          background-color: $primary-color;
+          border: none;
+          border-radius: 2px;
+          padding: 8px 16px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          width: 100%;
+          margin-top: 24px;
+
+          &:hover {
+            background-color: darken($primary-color, 5%);
+          }
+          &:disabled {
+            background-color: grey;
+          }
+        }
+      }
+    }
+  }
+}

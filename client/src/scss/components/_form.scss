@@ -1,0 +1,177 @@
+// styles/app.scss
+
+// Main container for the form
+.editform {
+  width: 100%;
+  margin-top: 20px;
+
+  border-radius: 0px 0px 20px 20px;
+  background-color: inherit;
+  align-items: center;
+  min-height: calc(65vh);
+  margin-bottom: 21vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .popup-overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    position: relative;
+    .subbtn {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @media (max-width: 570px) {
+        flex-direction: column;
+      }
+      .addbtn {
+        @media (max-width: 570px) {
+          margin-bottom: 20px;
+        }
+        &:hover {
+          background-color: darken(white, 8);
+        }
+      }
+      .btnsub {
+        background-color: blue;
+        &:hover {
+          background-color: darken(blue, 8);
+        }
+      }
+    }
+  }
+
+  .popup {
+    display: flex;
+    flex-direction: column;
+    .textField {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .daybtn {
+      margin-bottom: 20px;
+
+      .btnday {
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+        &:hover {
+          background-color: darken(blue, 8);
+        }
+      }
+    }
+    .dateBtn {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 0.2fr;
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      .btndate {
+        margin-left: 20px;
+        width: 60px;
+        height: 60px;
+        margin-top: 17px;
+        &:hover {
+          background-color: darken(blue, 8);
+        }
+      }
+    }
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .discipline-block,
+  .lesson-block {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button[type='submit'] {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+  }
+
+  button[type='submit']:disabled {
+    background-color: #b0bec5;
+    cursor: not-allowed;
+  }
+
+  button[type='button'] {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+  }
+
+  button[type='button'].MuiButton-outlined {
+    background-color: transparent;
+    border: 1px solid #1976d2;
+    color: #1976d2;
+  }
+
+  button[type='button'].MuiButton-outlined.color-secondary {
+    border-color: #f44336;
+    color: #f44336;
+  }
+
+  #close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+
+  #close-button .MuiSvgIcon-root {
+    color: #f44336;
+  }
+  .btnfcont {
+    display: flex;
+    flex-direction: column;
+    :first-of-type {
+      margin-bottom: 20px;
+    }
+  }
+}

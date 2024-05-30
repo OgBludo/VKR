@@ -1,0 +1,19 @@
+@import './variables';
+@import 'libs/normalize';
+
+@import 'components/all';
+
+body {
+  background-color: $background;
+  background-image: url('https://www.iptelecom.ie/hubfs/technology-network-data-connection-network-marketing-cyber-security-concept-1.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+}
+
+.container {
+  width: $container-width;
+  margin: 0 auto;
+}

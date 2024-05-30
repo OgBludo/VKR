@@ -1,0 +1,111 @@
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(65vh);
+  margin-bottom: 21vh;
+  margin-top: 50px;
+
+  .calendar {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 800px;
+    padding: 20px;
+    position: relative;
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 600px;
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+      }
+
+      th {
+        background-color: #f0f0f0;
+      }
+
+      td {
+        width: 14.28%; /* Each day occupies 14.28% to fit 7 days in a row */
+      }
+    }
+    .navigation-buttons {
+      margin-bottom: 20px;
+      color: white;
+      button {
+        margin-right: 10px;
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+.day-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .day-name {
+    font-weight: bold;
+  }
+
+  .day-number {
+    font-size: 1.2em;
+  }
+
+  .month-name {
+    text-transform: uppercase;
+  }
+}
+
+.lesson {
+  justify-content: space-between;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin: 10px;
+
+  > div {
+    margin-bottom: 5px;
+  }
+
+  .lesson-time {
+    font-weight: bold;
+  }
+
+  .teacher-info,
+  .discipline-info,
+  .lesson-info {
+    font-style: italic;
+  }
+}
+.day {
+  display: flex;
+  align-items: center;
+  height: 500px;
+}

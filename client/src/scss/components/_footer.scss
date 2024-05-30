@@ -1,0 +1,33 @@
+@import '../variables';
+
+.footer {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid $gray-line;
+  padding: 5px 0;
+  border-radius: 20px 20px 0px 0px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 4px 5px rgba(39, 149, 232, 0.48);
+  -moz-box-shadow: 0px 0px 4px 5px rgba(39, 149, 232, 0.48);
+  box-shadow: 0px 0px 4px 5px rgba(39, 149, 232, 0.48);
+
+  .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    align-items: center;
+    @media (max-width: 570px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+    }
+    div {
+      margin: 20px;
+      text-align: center;
+    }
+  }
+}
